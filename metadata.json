@@ -1,8 +1,6 @@
 {
   "name": "PixelGym",
-  "description": "A Material 3 Expressive designed gym companion application. Features include workout tracking, AI-powered exercise recommendations, food calorie scanning via photos, and video analysis for exercise routines using Gemini 3.1 Pro with high thinking mode.",
-  "requestFramePermissions": [
-    "camera"
-  ],
-  "majorCapabilities": []
+  "description": "Material 3 Expressive fitness companion inspired by PixelPlayer. Track sets & reps, explore a live exercise library with AI-generated demo videos (Veo 3), scan meals for instant macros with Gemini Vision, build AI routines, chat with a high-thinking AI coach, plan daily nutrition, and monitor weekly progress — all with fluid spring animations and squircle shapes.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["ai", "camera", "offline-first"]
 }
