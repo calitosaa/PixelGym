@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #AEC6FF;
+  --on-primary: #002E69;
+  --primary-container: #19448F;
+  --on-primary-container: #D7E3FF;
+  --secondary: #C0C6DD;
+  --on-secondary: #2A3041;
+  --secondary-container: #404659;
+  --tertiary: #E0BEEB;
+  --on-tertiary: #412A4A;
+  --tertiary-container: #5A3F62;
+  --error: #FFB4AB;
+  --on-error: #690005;
+  --background: #000000;
+  --on-background: #E2E2E9;
+  --surface: #111318;
+  --on-surface: #E2E2E9;
+  --surface-variant: #434751;
+  --on-surface-variant: #C3C6D0;
+  --outline: #8E9099;
+}
+
+body.dark, body {
+  background-color: var(--background);
+  color: var(--on-background);
+  background-image: 
+    radial-gradient(circle at 0% 0%, color-mix(in srgb, var(--primary) 15%, transparent) 0%, transparent 50%),
+    radial-gradient(circle at 100% 100%, color-mix(in srgb, var(--tertiary) 15%, transparent) 0%, transparent 50%);
+  background-attachment: fixed;
+  font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
+  min-height: 100dvh;
+}
+
+/* Material 3 Expressive squircle Overrides - PixelPlayer Style */
+.expressive-card {
+  border-radius: 40px;
+  background-color: color-mix(in srgb, var(--surface-variant) 30%, transparent);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid color-mix(in srgb, var(--on-surface) 5%, transparent);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.4s;
+  overflow: hidden;
+}
+
+.expressive-card:active {
+  transform: scale(0.95);
+}
+
+.expressive-hero {
+  border-radius: 48px;
+  background: var(--primary-container);
+  color: var(--on-primary-container);
+  box-shadow: 0 30px 60px -12px color-mix(in srgb, var(--primary-container) 40%, transparent);
+}
+
+.expressive-btn {
+  border-radius: 999px;
+  text-transform: none;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  padding: 1.2rem 2.5rem;
+  font-size: 1.15rem;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.expressive-btn:active {
+  transform: scale(0.92);
+}
+
+.expressive-headline {
+  font-size: 4rem;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  font-weight: 800;
+}
+
+/* Floating Pill Nav */
+.pixel-nav {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--surface) 70%, transparent);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border: 1px solid color-mix(in srgb, var(--on-surface) 10%, transparent);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.pixel-nav-item {
+  padding: 12px 24px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  color: var(--outline);
+}
+
+.pixel-nav-item i {
+  font-size: 1.75rem;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.pixel-nav-item.active {
+  background: var(--secondary-container);
+  color: var(--on-secondary-container);
+}
+
+.pixel-nav-item.active i {
+  transform: scale(1.15);
+}
+
+/* Base resets & tweaks */
+.markdown-body { font-family: inherit; }
+.markdown-body p { margin-top: 0.5em; margin-bottom: 0.5em; }
+.markdown-body strong { font-weight: 800; color: var(--primary); }
+.markdown-body h1, .markdown-body h2, .markdown-body h3 { font-weight: 700; margin-top: 1em; margin-bottom: 0.5em; letter-spacing: -0.03em; }
+.markdown-body ul { list-style-type: disc; padding-left: 1.5em; margin-bottom: 1em; }
+.markdown-body ol { list-style-type: decimal; padding-left: 1.5em; margin-bottom: 1em; }
+
+.track-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--on-surface) 5%, transparent);
+}
+.track-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-variant);
+  color: var(--on-surface-variant);
+}

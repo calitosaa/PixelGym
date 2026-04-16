@@ -1,0 +1,8 @@
+{
+  "name": "PixelGym",
+  "description": "A Material 3 Expressive designed gym companion application. Features include workout tracking, AI-powered exercise recommendations, food calorie scanning via photos, and video analysis for exercise routines using Gemini 3.1 Pro with high thinking mode.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": []
+}
